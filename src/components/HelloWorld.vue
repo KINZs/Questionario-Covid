@@ -1,51 +1,53 @@
 <template>
   <v-container>
     <v-row class="text-center">
-
       <v-col class="mb-4">
-        <checkbox-question v-bind:q="$t(currentQuestion)"/>
+        <question />
       </v-col>
     </v-row>
     <v-row class="text-center">
       <v-col>
-        <v-btn x-large color="primary" :disabled="!currentValue" @click="moveOn"> {{$t('continuebutton')}} </v-btn>
+        <v-btn
+          x-large
+          color="primary"
+          :disabled="!currentValue"
+          @click="moveOn"
+        >
+          {{ $t("continuebutton") }}
+        </v-btn>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
-import CheckboxQuestion from './CheckboxQuestion.vue';
-import {store} from '../store';
+import Question from "./Question.vue";
+import { store } from "../store";
 export default {
-  components: { CheckboxQuestion },
+  components: { Question },
   store,
-  question:null, 
-  // name: "HelloWorld",
-  
   data() {
-    return {
-      
-    };
+    return {};
   },
-  computed:{
-    currentQuestion(){
-      return this.question;
+  computed: {
+    question() {
+      return this.$store.state.question;
     },
-    currentValue(){
-      console.log(this.$store.state.currentValue)
+    currentValue() {
+      console.log(this.$store.state.currentValue);
       return this.$store.state.currentValue;
-    }
+    },
   },
-  methods:{
-    moveOn(){
-      console.log(this.$store.state.question.next[this.currentValue])
-      this.question = `questions.${this.$store.state.question.next[this.currentValue]}`
+  methods: {
+    moveOn() {
+      let next_question = this.$t(`questions.${this.question}.next["${this.currentValue}"]`)
+      console.log(next_question)
+      this.$store.commit("setQuestion", next_question);
       this.$store.commit("setCurrentValue", null);
-    }
+    },
   },
-  created(){
-    this.question = 'questions.QUESTAO_1';
-  }
+  created() {
+    this.$store.commit("setQuestion", "q_travel");
+  },
 };
 </script>
