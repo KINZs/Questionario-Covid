@@ -3,6 +3,7 @@
     <v-row>
       <v-col>
         <div class="text-h3">{{ $t(`${question}.title`) }}</div>
+        <div class="text-h5">{{ $t(`${question}.subtitle`) }}</div>
       </v-col>
     </v-row>
     <v-row>
