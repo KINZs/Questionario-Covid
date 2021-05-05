@@ -1,12 +1,24 @@
 <template>
-  <v-app-bar class="AppBar elevation-2" app>
-    <h2 @click="$router.push({ path: 'home' })">{{ $t('appname') }}</h2>
+  <v-app-bar class="AppBar elevation-2 overflow-y-auto" dense fixed color="#fcb69f" dark
+    src="https://lh3.googleusercontent.com/proxy/h3SzlLgiiNv6qtGrjeYaSz7aILMgwreplLdorOWyVDNAaWkMhTKUWI1YQng0m1tbYzU2zICDMsU9vGNO-WlEDd9aBRaVwwcFY2kiNhh29XPRUA"
+    app height="85px">
+    <template v-slot:img="{ props }">
+      <v-img v-bind="props" gradient="to top right, rgba(19,84,122,.5), rgba(128,208,199,.8)"></v-img>
+    </template>
+
+    <v-app-bar-nav-icon></v-app-bar-nav-icon>
+
+    <v-app-bar-title> {{ $t("appname") }}</v-app-bar-title>
+
     <v-spacer></v-spacer>
-    <v-btn v-if="user" text @click="logout">
-      <span class="mr-2">{{ $t('logout') }}</span>
+
+    <v-btn icon v-if="user" text @click="logout">
+      <!-- <span class="mr-2">{{ $t('logout') }}</span> -->
       <v-icon>{{ icons.mdiLogout }}</v-icon>
     </v-btn>
-    <v-btn text><LocaleChanger /></v-btn>
+    
+    <v-btn icon text><LocaleChanger /></v-btn>
+
     <v-tooltip bottom>
       <template v-slot:activator="{ on, attrs }">
         <v-btn v-bind="attrs" v-on="on" icon @click="toggleThemeDarkMode">
@@ -18,6 +30,7 @@
       <span>{{ $t(($vuetify.theme.dark ? 'light' : 'dark') + 'Mode') }}</span>
      </v-tooltip>
   </v-app-bar>
+
 </template>
 
 <script>
@@ -60,10 +73,15 @@ export default {
 
 <style lang="scss">
 .AppBar {
-  h2 {
+  v-app-bar {
+    position: fixed;
+  }
+  v-app-bar-title {
     cursor: pointer;
     text-transform: uppercase;
     font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    padding-left: 25px;
   }
 }
 </style>

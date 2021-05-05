@@ -1,6 +1,6 @@
 <template>
-  <v-footer class="Footer" dark padless>
-    <v-card flat tile class="indigo box lighten-1 white--text text-center">
+  <v-footer class="Footer" color="#0040b7" dark padless>
+    <v-card flat tile class="indigo  white--text text-center">
       <v-card-text class="white--text">
         Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet.
         Mauris cursus commodo interdum. Praesent ut risus eget metus luctus
@@ -23,8 +23,9 @@
 
 <style lang="scss">
 .Footer {
-  v-card {
-    margin: "20px";
+  .v-card {
+    padding: 50px;
+    font-family: "Roboto", sans-serif;
   }
 }
 </style>

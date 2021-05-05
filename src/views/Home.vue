@@ -25,6 +25,8 @@ export default {
 
 <style lang="scss">
 .Home {
+  height: 100vh;
+  width: auto;
   .v-app-bar {
     h2 {
       text-transform: uppercase;
