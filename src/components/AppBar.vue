@@ -63,6 +63,7 @@ export default {
   h2 {
     cursor: pointer;
     text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
   }
 }
 </style>

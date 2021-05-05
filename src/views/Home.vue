@@ -4,19 +4,23 @@
     <v-main>
       <HelloWorld />
     </v-main>
+    <Footer />
   </div>
 </template>
 
 <script>
-import HelloWorld from '../components/HelloWorld'
-import AppBar from '../components/AppBar'
+import HelloWorld from "../components/HelloWorld";
+import AppBar from "../components/AppBar";
+import Footer from "../components/Footer";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    HelloWorld, AppBar
-  }
-}
+    HelloWorld,
+    AppBar,
+    Footer,
+  },
+};
 </script>
 
 <style lang="scss">
@@ -24,6 +28,7 @@ export default {
   .v-app-bar {
     h2 {
       text-transform: uppercase;
+      font-family: "Roboto", sans-serif;
     }
   }
 }
