@@ -15,7 +15,7 @@ export default {
           {text:"Não", value:"no"},
         ],
         next:{
-            "yes":"ISOLATE",
+            "yes":"screen_isolate",
             "no":"q_doctor_eval",
         }
       },
@@ -26,11 +26,15 @@ export default {
       q_doctor_eval:{
         type:"radio", //NAO MUDE
         title:"Um médico, prestador de serviços de saúde ou unidade de saúde pública a que o aluno/criança deveria estar em isolamento (permanecer em casa)?",
-        subtitle:"Isso pode se dever a um surto ou rastreamento de contactos.",
+        subtitle:"Isso pode se dever a um surto ou rastreamento de contatos.",
         qoptions:[ //NAO MUDE
           {text:"Sim", value:"yes"},
           {text:"Não", value:"no"},
-        ]
+        ],
+        next:{
+          "yes":"screen_isolate",
+          "no":"q_close_contact",
+      }
       },
       /* O TEMPLATE TERMINA AQUI */
   
@@ -38,24 +42,15 @@ export default {
   /* COPIE E COLE O TEMPLATE ABAIXO PARA CRIAR NãoVAS QUESTOES */
       q_close_contact:{
         type:"radio", //NAO MUDE
-        title:"Nos últimos 14 dias, o aluno/criança foi identificado como «contacto próximo» de alguém que atualmente tem COVID-19?",
+        title:"Nos últimos 14 dias, o aluno/criança foi identificado como contato próximo de alguém que atualmente tem COVID-19?",
         qoptions:[ //NAO MUDE
           {text:"Sim", value:"yes"},
           {text:"Não", value:"no"},
-        ]
-      },
-      /* O TEMPLATE TERMINA AQUI */
-  
-  
-  /* COPIE E COLE O TEMPLATE ABAIXO PARA CRIAR NãoVAS QUESTOES */
-      q_alert:{
-        type:"radio", //NAO MUDE
-        title:"Nos últimos 14 dias, o aluno/criança recebeu uma Notificação de Alerta de Exposição à COVID no telemóvel?",
-        subtitle:"Se já fez um teste e o resultado foi negativo, seleciona “Não.”",
-        qoptions:[ //NAO MUDE
-          {text:"Sim", value:"yes"},
-          {text:"Não", value:"no"},
-        ]
+        ],
+        next:{
+          "yes":"screen_isolate",
+          "no":"q_fever",
+      }
       },
       /* O TEMPLATE TERMINA AQUI */
   
@@ -68,7 +63,11 @@ export default {
         qoptions:[ //NAO MUDE
           {text:"Sim", value:"yes"},
           {text:"Não", value:"no"},
-        ]
+        ],
+        next:{
+          "yes":"screen_isolate",
+          "no":"q_cough",
+      }
       },
       /* O TEMPLATE TERMINA AQUI */
   
@@ -81,7 +80,11 @@ export default {
         qoptions:[ //NAO MUDE
           {text:"Sim", value:"yes"},
           {text:"Não", value:"no"},
-        ]
+        ],
+        next:{
+          "yes":"screen_isolate",
+          "no":"q_breath",
+      }
       },
       /* O TEMPLATE TERMINA AQUI */
   
@@ -94,19 +97,27 @@ export default {
         qoptions:[ //NAO MUDE
           {text:"Sim", value:"yes"},
           {text:"Não", value:"no"},
-        ]
+        ],
+        next:{
+          "yes":"screen_isolate",
+          "no":"q_taste",
+      }
       },
       /* O TEMPLATE TERMINA AQUI */
   
   /* COPIE E COLE O TEMPLATE ABAIXO PARA CRIAR NãoVAS QUESTOES */
-      q_tast:{
+      q_taste:{
         type:"radio", //NAO MUDE
         title:"O aluno/criança tem Diminuição ou perda do paladar ou olfato",
         subtitle:"Não relacionada a alergias sazonais, distúrbios neurológicos, ou outras causas ou problemas de saúde conhecidos preexistentes",
         qoptions:[ //NAO MUDE
           {text:"Sim", value:"yes"},
           {text:"Não", value:"no"},
-        ]
+        ],
+        next:{
+          "yes":"screen_isolate",
+          "no":"q_throat",
+      }
       },
       /* O TEMPLATE TERMINA AQUI */
   
@@ -118,7 +129,11 @@ export default {
         qoptions:[ //NAO MUDE
           {text:"Sim", value:"yes"},
           {text:"Não", value:"no"},
-        ]
+        ],
+        next:{
+          "yes":"screen_isolate",
+          "no":"q_nose",
+      }
       },
       /* O TEMPLATE TERMINA AQUI */
   
@@ -131,7 +146,11 @@ export default {
         qoptions:[ //NAO MUDE
           {text:"Sim", value:"yes"},
           {text:"Não", value:"no"},
-        ]
+        ],
+        next:{
+          "yes":"screen_isolate",
+          "no":"q_headache",
+      }
       },
       /* O TEMPLATE TERMINA AQUI */
   
@@ -143,7 +162,11 @@ export default {
         qoptions:[ //NAO MUDE
           {text:"Sim", value:"yes"},
           {text:"Não", value:"no"},
-        ]
+        ],
+        next:{
+          "yes":"screen_isolate",
+          "no":"q_vomit",
+      }
       },
       /* O TEMPLATE TERMINA AQUI */
   
@@ -155,7 +178,11 @@ export default {
         qoptions:[ //NAO MUDE
           {text:"Sim", value:"yes"},
           {text:"Não", value:"no"},
-        ]
+        ],
+        next:{
+          "yes":"screen_isolate",
+          "no":"q_tiredness",
+      }
       },
       /* O TEMPLATE TERMINA AQUI */
   
@@ -168,7 +195,11 @@ export default {
         qoptions:[ //NAO MUDE
           {text:"Sim", value:"yes"},
           {text:"Não", value:"no"},
-        ]
+        ],
+        next:{
+          "yes":"screen_isolate",
+          "no":"q_relatives",
+      }
       },
       /* O TEMPLATE TERMINA AQUI */
   
@@ -181,7 +212,11 @@ export default {
         qoptions:[ //NAO MUDE
           {text:"Sim", value:"yes"},
           {text:"Não", value:"no"},
-        ]
+        ],
+        next:{
+          "yes":"screen_isolate",
+          "no":"screen_take_care",
+      }
       },
       /* O TEMPLATE TERMINA AQUI */
   
