@@ -3,8 +3,10 @@ export default {
   continuebutton: "Continuar",
   darkMode: "Apagado",
   lightMode: "Aceso",
+  at:"as",
+  validatedAt:"Validado",
 
-  questions: {
+  question: {
     q_travel: {
       type: "radio", //NAO MUDE
       title:
@@ -17,7 +19,7 @@ export default {
         { text: "Não", value: "no" },
       ],
       next: {
-        yes: "screen_isolate",
+        yes: "r_isolate",
         no: "q_doctor_eval",
       },
     },
@@ -33,7 +35,7 @@ export default {
         { text: "Não", value: "no" },
       ],
       next: {
-        yes: "screen_isolate",
+        yes: "r_isolate",
         no: "q_close_contact",
       },
     },
@@ -49,7 +51,7 @@ export default {
         { text: "Não", value: "no" },
       ],
       next: {
-        yes: "screen_isolate",
+        yes: "r_isolate",
         no: "q_fever",
       },
     },
@@ -65,7 +67,7 @@ export default {
         { text: "Não", value: "no" },
       ],
       next: {
-        yes: "screen_isolate",
+        yes: "r_isolate",
         no: "q_cough",
       },
     },
@@ -81,7 +83,7 @@ export default {
         { text: "Não", value: "no" },
       ],
       next: {
-        yes: "screen_isolate",
+        yes: "r_isolate",
         no: "q_breath",
       },
     },
@@ -97,7 +99,7 @@ export default {
         { text: "Não", value: "no" },
       ],
       next: {
-        yes: "screen_isolate",
+        yes: "r_isolate",
         no: "q_taste",
       },
     },
@@ -113,7 +115,7 @@ export default {
         { text: "Não", value: "no" },
       ],
       next: {
-        yes: "screen_isolate",
+        yes: "r_isolate",
         no: "q_throat",
       },
     },
@@ -129,7 +131,7 @@ export default {
         { text: "Não", value: "no" },
       ],
       next: {
-        yes: "screen_isolate",
+        yes: "r_isolate",
         no: "q_nose",
       },
     },
@@ -145,7 +147,7 @@ export default {
         { text: "Não", value: "no" },
       ],
       next: {
-        yes: "screen_isolate",
+        yes: "r_isolate",
         no: "q_headache",
       },
     },
@@ -160,7 +162,7 @@ export default {
         { text: "Não", value: "no" },
       ],
       next: {
-        yes: "screen_isolate",
+        yes: "r_isolate",
         no: "q_vomit",
       },
     },
@@ -175,7 +177,7 @@ export default {
         { text: "Não", value: "no" },
       ],
       next: {
-        yes: "screen_isolate",
+        yes: "r_isolate",
         no: "q_tiredness",
       },
     },
@@ -190,7 +192,7 @@ export default {
         { text: "Não", value: "no" },
       ],
       next: {
-        yes: "screen_isolate",
+        yes: "r_isolate",
         no: "q_relatives",
       },
     },
@@ -205,9 +207,24 @@ export default {
         { text: "Não", value: "no" },
       ],
       next: {
-        yes: "screen_isolate",
+        yes: "r_isolate",
         no: "screen_take_care",
       },
     },
   },
+
+  result:{
+    isolate: {
+      title: "Não saia de casa / isolamento",
+      icon: "times",
+      result:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    },
+    safe: {
+      title: "Siga a rotina / com cuidado",
+      icon: "check",
+      result:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    },
+  }
 };

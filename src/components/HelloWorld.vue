@@ -2,7 +2,7 @@
   <v-container>
     <v-row class="text-center">
       <v-col class="mb-4">
-        <question />
+        <component :is="currentState"/>
       </v-col>
     </v-row>
     <v-row class="text-center">
@@ -22,9 +22,10 @@
 
 <script>
 import Question from "./Question.vue";
+import Result from "./Result";
 import { store } from "../store";
 export default {
-  components: { Question },
+  components: { Question, Result },
   store,
   data() {
     return {};
@@ -33,6 +34,9 @@ export default {
     question() {
       return this.$store.state.question;
     },
+    currentState() {
+      return this.$store.state.currentState;
+    },
     currentValue() {
       console.log(this.$store.state.currentValue);
       return this.$store.state.currentValue;
@@ -40,14 +44,17 @@ export default {
   },
   methods: {
     moveOn() {
-      let next_question = this.$t(`questions.${this.question}.next["${this.currentValue}"]`)
-      console.log(next_question)
+      let next_question = this.$t(`question.${this.question}.next["${this.currentValue}"]`)
+      if (next_question.split("_")[0] == 'r'){
+        this.$store.commit("setCurrentState", "result");
+      }
       this.$store.commit("setQuestion", next_question);
       this.$store.commit("setCurrentValue", null);
     },
   },
   created() {
     this.$store.commit("setQuestion", "q_travel");
+    this.$store.commit("setCurrentState", "question");
   },
 };
 </script>
