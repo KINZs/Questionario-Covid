@@ -17,6 +17,8 @@ export default new Vuex.Store({
       state.answers[answer.text] = answer.value;
       state.currentValue = answer.value;
     },
+
+    
     setCurrentValue(state, value){
       state.currentValue = value;
     },

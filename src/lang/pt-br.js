@@ -5,6 +5,11 @@ export default {
   lightMode: "Aceso",
   at:"as",
   validatedAt:"Validado",
+  home:"Home",
+  aboutUs:"Sobre Nos",
+  team: "Time",
+  termsOfService: "Termos de Uso",
+  dataPolicy:"Politica de Dados",
 
   question: {
     q_travel: {

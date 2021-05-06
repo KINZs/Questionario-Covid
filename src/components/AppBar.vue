@@ -1,18 +1,14 @@
 <template>
-  <v-app-bar class="AppBar elevation-2 overflow-y-auto" dense fixed color="#fcb69f" dark
-    src="https://lh3.googleusercontent.com/proxy/h3SzlLgiiNv6qtGrjeYaSz7aILMgwreplLdorOWyVDNAaWkMhTKUWI1YQng0m1tbYzU2zICDMsU9vGNO-WlEDd9aBRaVwwcFY2kiNhh29XPRUA"
+  <v-app-bar class="AppBar elevation-2 overflow-y-auto" dense fixed color="primary lighten-1"
+    
     app height="85px">
-    <template v-slot:img="{ props }">
-      <v-img v-bind="props" gradient="to top right, rgba(19,84,122,.5), rgba(128,208,199,.8)"></v-img>
-    </template>
-
     <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-    <v-app-bar-title> {{ $t("appname") }}</v-app-bar-title>
+    <v-app-bar-title class="white--text"> {{ $t("appname") }}</v-app-bar-title>
 
     <v-spacer></v-spacer>
     <v-btn text><LocaleChanger /></v-btn>
-    <v-tooltip bottom>
+    <!-- <v-tooltip bottom>
       <template v-slot:activator="{ on, attrs }">
         <v-btn v-bind="attrs" v-on="on" icon @click="toggleThemeDarkMode">
           <v-icon :style="{transform: `rotate(${$vuetify.theme.dark ? 0 : -190 }deg)`}">
@@ -21,7 +17,7 @@
         </v-btn>
       </template>
       <span>{{ $t(($vuetify.theme.dark ? 'light' : 'dark') + 'Mode') }}</span>
-     </v-tooltip>
+     </v-tooltip> -->
   </v-app-bar>
 
 </template>

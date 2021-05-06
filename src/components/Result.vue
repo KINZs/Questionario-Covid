@@ -30,29 +30,31 @@
         <v-icon x-large> {{ icons.mdiDownload }} </v-icon>
       </v-col>
       <v-col cols="10">
-        <v-col cols="12" md="6"
-          ><v-btn
-            class="btn"
-            color="primary"
-            elevation="2"
-            outlined
-            raised
-            x-large
-            >Resultado por Email
-          </v-btn></v-col
-        >
-        <v-col cols="12" md="6"
-          ><v-btn
-            class="btn"
-            color="primary"
-            elevation="2"
-            outlined
-            raised
-            x-large
+        <v-row>
+          <v-col cols="12" md="6" lg="6"
+            ><v-btn
+              class="btn"
+              color="primary"
+              elevation="2"
+              outlined
+              raised
+              x-large
+              >Resultado por Email
+            </v-btn></v-col
           >
-            Baixar resultado (PDF)
-          </v-btn>
-        </v-col>
+          <v-col cols="12" md="6" lg="6"
+            ><v-btn
+              class="btn"
+              color="primary"
+              elevation="2"
+              outlined
+              raised
+              x-large
+            >
+              Baixar resultado (PDF)
+            </v-btn>
+          </v-col>
+        </v-row>
       </v-col>
     </v-row>
     <v-row>
