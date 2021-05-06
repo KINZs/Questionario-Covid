@@ -8,6 +8,8 @@ export default new Vuex.Store({
     answers: {}, 
     currentValue: null,
     question:null,
+    currentState: null,
+    result:null,
   },
   mutations: {
     setAnswer(state, answer){
@@ -20,6 +22,9 @@ export default new Vuex.Store({
     },
     setQuestion(state, question){
       state.question = question;
+    },
+    setCurrentState(state, value){
+      state.currentState = value;
     }
   },
   actions: {

@@ -3,7 +3,6 @@ import Vuetify from 'vuetify/lib'
 
 const locales = {
   en: require('vuetify/es5/locale/en'),
-  fr: require('vuetify/es5/locale/fr')
 }
 
 const current = navigator.language.split('-')[0]
@@ -14,7 +13,7 @@ export default new Vuetify({
   locales,
   current,
   icons: {
-    iconfont: 'mdiSvg'
+    iconfont: 'mdiSvg', // 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4' || 'faSvg'
   },
   theme: {
     dark: false,

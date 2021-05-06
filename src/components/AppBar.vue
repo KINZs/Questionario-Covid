@@ -2,10 +2,6 @@
   <v-app-bar class="AppBar elevation-2" app>
     <h2 @click="$router.push({ path: 'home' })">{{ $t('appname') }}</h2>
     <v-spacer></v-spacer>
-    <v-btn v-if="user" text @click="logout">
-      <span class="mr-2">{{ $t('logout') }}</span>
-      <v-icon>{{ icons.mdiLogout }}</v-icon>
-    </v-btn>
     <v-btn text><LocaleChanger /></v-btn>
     <v-tooltip bottom>
       <template v-slot:activator="{ on, attrs }">
@@ -21,8 +17,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import { mdiLogin, mdiLogout, mdiThemeLightDark } from '@mdi/js'
+import { mdiThemeLightDark } from '@mdi/js'
 import LocaleChanger from '../components/LocaleChanger'
 
 export default {
@@ -32,25 +27,10 @@ export default {
   },
   data () {
     return {
-      icons: { mdiLogin, mdiLogout, mdiThemeLightDark }
-    }
-  },
-  computed: {
-    ...mapState('User', [
-      'user'
-    ]),
-    isLoginPage () {
-      return this.$router.currentRoute.name === 'login'
+      icons: { mdiThemeLightDark }
     }
   },
   methods: {
-    login () {
-      this.$router.push({ path: 'login' })
-    },
-    logout () {
-      this.$store.dispatch('User/logout')
-        .then(() => this.$router.push({ path: 'home' }))
-    },
     toggleThemeDarkMode () {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark
     }

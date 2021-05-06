@@ -17,22 +17,22 @@ const router = new Router({
   ]
 })
 
-router.beforeEach((to, from, next) => {
-  if (to.meta.middleware) {
-    const middleware = to.meta.middleware
-    const funcChaine = []
-    for (let i = middleware.length - 1; i >= 0; i--) {
-      funcChaine[i] = () => middleware[i]({
-        from,
-        next: i !== (middleware.length - 1) ? funcChaine[i+1] : next,
-        router,
-        to
-      })
-    }
-    funcChaine[0]()
-  } else {
-    next()
-  }
-})
+// router.beforeEach((to, from, next) => {
+//   if (to.meta.middleware) {
+//     const middleware = to.meta.middleware
+//     const funcChaine = []
+//     for (let i = middleware.length - 1; i >= 0; i--) {
+//       funcChaine[i] = () => middleware[i]({
+//         from,
+//         next: i !== (middleware.length - 1) ? funcChaine[i+1] : next,
+//         router,
+//         to
+//       })
+//     }
+//     funcChaine[0]()
+//   } else {
+//     next()
+//   }
+// })
 
 export default router
