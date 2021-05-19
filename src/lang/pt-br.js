@@ -3,13 +3,21 @@ export default {
   continuebutton: "Continuar",
   darkMode: "Apagado",
   lightMode: "Aceso",
-  at:"as",
-  validatedAt:"Validado",
-  home:"Home",
-  aboutUs:"Sobre Nos",
+  at: "as",
+  validatedAt: "Validado",
+  home: "Home",
+  aboutUs: "Sobre Nos",
   team: "Time",
   termsOfService: "Termos de Uso",
-  dataPolicy:"Politica de Dados",
+  dataPolicy: "Politica de Dados",
+
+  schoolQuestionnaire: {
+    initialScreen: {
+      title: "Triagem da COVID-19 em escolas e creches",
+      subtitle:
+        "Responda às seguintes perguntas para ajudá-la a decidir se você deve ou não ir à escola / creche hoje.",
+    },
+  },
 
   question: {
     q_travel: {
@@ -218,7 +226,7 @@ export default {
     },
   },
 
-  result:{
+  result: {
     isolate: {
       title: "Não saia de casa / isolamento",
       icon: "times",
@@ -231,5 +239,5 @@ export default {
       result:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
     },
-  }
+  },
 };
