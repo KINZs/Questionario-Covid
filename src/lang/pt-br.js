@@ -14,8 +14,10 @@ export default {
   schoolQuestionnaire: {
     initialScreen: {
       title: "Triagem da COVID-19 em escolas e creches",
-      subtitle:
-        "Responda às seguintes perguntas para ajudá-la a decidir se você deve ou não ir à escola / creche hoje.",
+      subtitle: "Responda às seguintes perguntas para ajudá-la a decidir se você deve ou não ir à escola / creche hoje.",
+      body: "Você deve fazer a triagem para COVID-19 todos os dias antes de ir para a escola / creche.",
+      alert: "Todos em sua casa devem ficar em casa se alguém apresentar sintomas de COVID-19 ou estiver esperando os resultados do teste depois de sentir os sintomas. Fique em casa até que a pessoa com os sintomas obtenha um resultado negativo do teste COVID-19, seja liberado pela saúde pública ou seja diagnosticado com outra doença.", 
+      button: "Comece a triagem escolar",
     },
   },
 
